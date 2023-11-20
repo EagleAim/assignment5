@@ -34,3 +34,22 @@ console.log(range(1, 10));
 // let arrayValue = [1, 2, 3, 4, 5];
 // reverseArrayInPlace(arrayValue);
 // console.log(arrayValue); // outputs [5, 4, 3, 2, 1]
+
+function reverseArray(array) {
+    var reversedArray = [];
+    while (i=array.pop())
+    reversedArray.push(i);
+    return reversedArray
+}
+console.log(reverseArray(["A", "B", "C"]));
+
+function reverseArrayInPlace(array){
+    for(var i = 0; i < Math.floor( array.length/2 ); i++){
+        var temp=array[i];
+        array[i]=array[array.length - 1 - i];
+        array[array.length - 1 - i] = temp;
+    }
+}
+var arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
